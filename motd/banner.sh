@@ -4,7 +4,7 @@
 # Memory calculation reference
 # https://unix.stackexchange.com/questions/152299/how-to-get-memory-usedram-used-using-linux-command
 
-hostname=`hostname -f`
+hostname=`hostname`
 echo "
 System Status:
 Date/Time: `TZ='Asia/Kuala_Lumpur' date`
