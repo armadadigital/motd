@@ -11,7 +11,7 @@ Date/Time: `TZ='Asia/Kuala_Lumpur' date`
 Total User: `w | head -1 | awk '{ print $6}'`
 
 - Server Name           = `hostname -A`
-- Local IP Address      = `hostname --all-ip-addresses`
+- Local IP Address      = `hostname --ip-address`
 - Load Average          = `cat /proc/loadavg`
 - System Uptime         = `uptime | awk '{ print $3 " " $4}'`
 - System Data           = `uname -orpi`
@@ -21,5 +21,10 @@ Total User: `w | head -1 | awk '{ print $6}'`
 - Swap in use           = `free -m | tail -n 1 | awk {'print $3'}`
 - Disk Space Used       = `df -h / | awk '{ a = $3 } END { print a }'`
 - Disk Space Avaible    = `df -h / | awk '{ a = $4 } END { print a }'`
+- Alias			= `grep -i alias $HOME/.bash_profile`
+
+Notes:
+Command to block IP: $~ iptables -A INPUT -s 42.123.81.144 -j DROP
+Command to save iptables: $~ service iptables save
 "
 
