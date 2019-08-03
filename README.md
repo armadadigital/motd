@@ -6,12 +6,12 @@ To setup the script is very straightforward where we just need to copy the shell
 ### Step as follows:
 
 
-1. Copy the script to /usr/local/bin/
+1. Clone the script and copy the script to /usr/local/bin/
 ```sh
 $ sudo cp banner /usr/local/bin/
 ```
 
-2. Modify the /etc/profile so all users will get the same system information once they login and add /usr/local/bin/banner to the end of the file.
+2. Modify the /etc/profile or .bash_profile ( if you dont have admin priviledges ) so all users will get the same system information once they login and add /usr/local/bin/banner to the end of the file.
 
 3. Re-login to the system again.
 
