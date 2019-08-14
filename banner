@@ -4,11 +4,10 @@
 # Memory calculation reference
 # https://unix.stackexchange.com/questions/152299/how-to-get-memory-usedram-used-using-linux-command
 
-hostname=`hostname -f`
 echo "
-			System Status:
-			Date/Time: `TZ='Asia/Kuala_Lumpur' date`
-			Total User: `w | head -1 | awk '{ print $6}'`
+	System Status:
+	Date/Time: `TZ='Asia/Kuala_Lumpur' date`
+	Total User: `w | head -1 | awk '{ print $6}'`
 
 - Server Name           = `hostname -A`
 - Local IP Address      = `hostname -I`
