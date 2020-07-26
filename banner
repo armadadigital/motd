@@ -15,7 +15,7 @@ echo "
 	Date/Time: `TZ='Asia/Kuala_Lumpur' date`
 	Total User: `w -h | wc -l`
 
-	- Server Name           = `hostname -A`
+	- Server Name           = `hostname`
 	- Local IP Address      = `hostname -I`
 	- Load Average          = `cat /proc/loadavg`
 	- System Uptime         = `uptime | awk '{ print $3 " " $4}'`
