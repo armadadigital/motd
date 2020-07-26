@@ -8,11 +8,12 @@
 # - Alias                 = `echo;grep -i alias $HOME/.bash_profile | grep -v ^#`
 # Add - Hardware Informations
 # Need to install lshw for display informations
+# Update total user command
 
 echo "
 	System Status:
 	Date/Time: `TZ='Asia/Kuala_Lumpur' date`
-	Total User: `w | head -1 | awk '{ print $6}'`
+	Total User: `w -h | wc -l`
 
 	- Server Name           = `hostname -A`
 	- Local IP Address      = `hostname -I`
@@ -28,8 +29,8 @@ echo "
 
 
 	Hardware Information:
-	- CPU 			= `dmidecode -t processor | grep Version | awk '{$1=$1};1'`
-	- Graphic		= `lshw -class display | grep product | awk '{$1=$1};1'`
+	- CPU 			= `dmidecode -t processor | grep Version | cut -d " " -f 2-`
+	- Graphic		= `lshw -class display | grep product | awk '{ sub(/^[ \t]+/, ""); print }' | cut -d " " -f 2-`
 
 Notes:
 Command to block IP: $~ iptables -A INPUT -s 42.123.81.144 -j DROP
