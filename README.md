@@ -8,7 +8,8 @@ To setup the script is very straightforward where we just need to copy the shell
 
 1. Clone the script and copy the script to /usr/local/bin/
 ```sh
-$ sudo cp banner /usr/local/bin/
+$ cd /opt; git clone git@github.com:armadadigital/motd.git;
+$ sudo ln -s /opt/motd/banner /usr/local/bin/banner
 ```
 
 2. Modify the /etc/profile or .bash_profile ( if you dont have admin priviledges ) so all users will get the same system information once they login and add /usr/local/bin/banner to the end of the file.
