@@ -3,6 +3,12 @@ Linux summary system information display right after your login into the system.
 
 To setup the script is very straightforward where we just need to copy the shell script and store it in the /usr/loca/bin.
 
+# Pre-requisite;
++ Need to install lshw;
+```sh
+$ sudo yum install lshw
+```
+
 ### Step as follows:
 
 
